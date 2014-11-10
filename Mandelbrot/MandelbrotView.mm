@@ -53,7 +53,7 @@ using namespace std;
             
             int r = ((iterations & 0xf0) >> 2) * 0xf;
             int g = ((iterations & 0xf0) >> 1) * 0xf;
-            int b = ((iterations & 0x0f) >> 0) * 0xf;
+            int b = ((iterations & 0xff) >> 0) * 0xf;
             
             CGContextSetRGBFillColor(context, r / 255.0f, g / 255.0f, b / 255.0f, 1.0f);
             CGContextAddRect(context, CGRectMake(ix / accuracy, iy / accuracy, 1.0f / accuracy, 1.0f / accuracy));
