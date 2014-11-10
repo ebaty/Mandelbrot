@@ -39,7 +39,7 @@ using namespace std;
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     int max_iterations = 0xff;
-    double accuracy = 1.0f;
+    double accuracy = 1.5f;
     int w = self.frame.size.width * accuracy;
     int h = self.frame.size.height * accuracy;
     for (int ix = 0; ix < w; ++ix) {
