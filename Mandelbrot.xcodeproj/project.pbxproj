@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F48F8C311A1048E500B158AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F48F8C301A1048E500B158AF /* main.m */; };
+		F48F8C341A1048E500B158AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F48F8C331A1048E500B158AF /* AppDelegate.m */; };
+		F48F8C371A1048E500B158AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F48F8C361A1048E500B158AF /* ViewController.m */; };
+		F48F8C3A1A1048E500B158AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F48F8C381A1048E500B158AF /* Main.storyboard */; };
+		F48F8C3C1A1048E500B158AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48F8C3B1A1048E500B158AF /* Images.xcassets */; };
+		F48F8C3F1A1048E500B158AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48F8C3D1A1048E500B158AF /* LaunchScreen.xib */; };
+		F48F8C4B1A1048E600B158AF /* MandelbrotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F48F8C4A1A1048E600B158AF /* MandelbrotTests.m */; };
+		F499E7C81A10645700CC1C41 /* UIView+Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F499E7C71A10645700CC1C41 /* UIView+Indicator.m */; };
+		F499E7CC1A1066B800CC1C41 /* MandelbrotView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F499E7CB1A1066B800CC1C41 /* MandelbrotView.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F48F8C451A1048E600B158AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F48F8C231A1048E500B158AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F48F8C2A1A1048E500B158AF;
+			remoteInfo = Mandelbrot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F48F8C2B1A1048E500B158AF /* Mandelbrot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mandelbrot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48F8C2F1A1048E500B158AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F48F8C301A1048E500B158AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F48F8C321A1048E500B158AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F48F8C331A1048E500B158AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F48F8C351A1048E500B158AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F48F8C361A1048E500B158AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F48F8C391A1048E500B158AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F48F8C3B1A1048E500B158AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F48F8C3E1A1048E500B158AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F48F8C441A1048E600B158AF /* MandelbrotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MandelbrotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48F8C491A1048E600B158AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F48F8C4A1A1048E600B158AF /* MandelbrotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandelbrotTests.m; sourceTree = "<group>"; };
+		F499E7C61A10645700CC1C41 /* UIView+Indicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Indicator.h"; sourceTree = "<group>"; };
+		F499E7C71A10645700CC1C41 /* UIView+Indicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Indicator.m"; sourceTree = "<group>"; };
+		F499E7CA1A1066B800CC1C41 /* MandelbrotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MandelbrotView.h; sourceTree = "<group>"; };
+		F499E7CB1A1066B800CC1C41 /* MandelbrotView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MandelbrotView.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F48F8C281A1048E500B158AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48F8C411A1048E600B158AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F48F8C221A1048E500B158AF = {
+			isa = PBXGroup;
+			children = (
+				F48F8C2D1A1048E500B158AF /* Mandelbrot */,
+				F48F8C471A1048E600B158AF /* MandelbrotTests */,
+				F48F8C2C1A1048E500B158AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F48F8C2C1A1048E500B158AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F48F8C2B1A1048E500B158AF /* Mandelbrot.app */,
+				F48F8C441A1048E600B158AF /* MandelbrotTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F48F8C2D1A1048E500B158AF /* Mandelbrot */ = {
+			isa = PBXGroup;
+			children = (
+				F48F8C321A1048E500B158AF /* AppDelegate.h */,
+				F48F8C331A1048E500B158AF /* AppDelegate.m */,
+				F48F8C351A1048E500B158AF /* ViewController.h */,
+				F48F8C361A1048E500B158AF /* ViewController.m */,
+				F499E7C91A1066A500CC1C41 /* Mandelbrot */,
+				F499E7C61A10645700CC1C41 /* UIView+Indicator.h */,
+				F499E7C71A10645700CC1C41 /* UIView+Indicator.m */,
+				F48F8C381A1048E500B158AF /* Main.storyboard */,
+				F48F8C3B1A1048E500B158AF /* Images.xcassets */,
+				F48F8C3D1A1048E500B158AF /* LaunchScreen.xib */,
+				F48F8C2E1A1048E500B158AF /* Supporting Files */,
+			);
+			path = Mandelbrot;
+			sourceTree = "<group>";
+		};
+		F48F8C2E1A1048E500B158AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F48F8C2F1A1048E500B158AF /* Info.plist */,
+				F48F8C301A1048E500B158AF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F48F8C471A1048E600B158AF /* MandelbrotTests */ = {
+			isa = PBXGroup;
+			children = (
+				F48F8C4A1A1048E600B158AF /* MandelbrotTests.m */,
+				F48F8C481A1048E600B158AF /* Supporting Files */,
+			);
+			path = MandelbrotTests;
+			sourceTree = "<group>";
+		};
+		F48F8C481A1048E600B158AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F48F8C491A1048E600B158AF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F499E7C91A1066A500CC1C41 /* Mandelbrot */ = {
+			isa = PBXGroup;
+			children = (
+				F499E7CA1A1066B800CC1C41 /* MandelbrotView.h */,
+				F499E7CB1A1066B800CC1C41 /* MandelbrotView.mm */,
+			);
+			name = Mandelbrot;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F48F8C2A1A1048E500B158AF /* Mandelbrot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F48F8C4E1A1048E600B158AF /* Build configuration list for PBXNativeTarget "Mandelbrot" */;
+			buildPhases = (
+				F48F8C271A1048E500B158AF /* Sources */,
+				F48F8C281A1048E500B158AF /* Frameworks */,
+				F48F8C291A1048E500B158AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mandelbrot;
+			productName = Mandelbrot;
+			productReference = F48F8C2B1A1048E500B158AF /* Mandelbrot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F48F8C431A1048E600B158AF /* MandelbrotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F48F8C511A1048E600B158AF /* Build configuration list for PBXNativeTarget "MandelbrotTests" */;
+			buildPhases = (
+				F48F8C401A1048E600B158AF /* Sources */,
+				F48F8C411A1048E600B158AF /* Frameworks */,
+				F48F8C421A1048E600B158AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F48F8C461A1048E600B158AF /* PBXTargetDependency */,
+			);
+			name = MandelbrotTests;
+			productName = MandelbrotTests;
+			productReference = F48F8C441A1048E600B158AF /* MandelbrotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F48F8C231A1048E500B158AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "GMO Payment Gateway, Inc.";
+				TargetAttributes = {
+					F48F8C2A1A1048E500B158AF = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 94348D23TA;
+					};
+					F48F8C431A1048E600B158AF = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = F48F8C2A1A1048E500B158AF;
+					};
+				};
+			};
+			buildConfigurationList = F48F8C261A1048E500B158AF /* Build configuration list for PBXProject "Mandelbrot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F48F8C221A1048E500B158AF;
+			productRefGroup = F48F8C2C1A1048E500B158AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F48F8C2A1A1048E500B158AF /* Mandelbrot */,
+				F48F8C431A1048E600B158AF /* MandelbrotTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F48F8C291A1048E500B158AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48F8C3A1A1048E500B158AF /* Main.storyboard in Resources */,
+				F48F8C3F1A1048E500B158AF /* LaunchScreen.xib in Resources */,
+				F48F8C3C1A1048E500B158AF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48F8C421A1048E600B158AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F48F8C271A1048E500B158AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48F8C371A1048E500B158AF /* ViewController.m in Sources */,
+				F499E7C81A10645700CC1C41 /* UIView+Indicator.m in Sources */,
+				F499E7CC1A1066B800CC1C41 /* MandelbrotView.mm in Sources */,
+				F48F8C341A1048E500B158AF /* AppDelegate.m in Sources */,
+				F48F8C311A1048E500B158AF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F48F8C401A1048E600B158AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48F8C4B1A1048E600B158AF /* MandelbrotTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F48F8C461A1048E600B158AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F48F8C2A1A1048E500B158AF /* Mandelbrot */;
+			targetProxy = F48F8C451A1048E600B158AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F48F8C381A1048E500B158AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F48F8C391A1048E500B158AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F48F8C3D1A1048E500B158AF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F48F8C3E1A1048E500B158AF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F48F8C4C1A1048E600B158AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F48F8C4D1A1048E600B158AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F48F8C4F1A1048E600B158AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/stb/",
+				);
+				INFOPLIST_FILE = Mandelbrot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6cc90345-6c83-446b-8202-49b47f9eed96";
+			};
+			name = Debug;
+		};
+		F48F8C501A1048E600B158AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/stb/",
+				);
+				INFOPLIST_FILE = Mandelbrot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRIVATE_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/PrivateHeaders";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6cc90345-6c83-446b-8202-49b47f9eed96";
+			};
+			name = Release;
+		};
+		F48F8C521A1048E600B158AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MandelbrotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mandelbrot.app/Mandelbrot";
+			};
+			name = Debug;
+		};
+		F48F8C531A1048E600B158AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MandelbrotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mandelbrot.app/Mandelbrot";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F48F8C261A1048E500B158AF /* Build configuration list for PBXProject "Mandelbrot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48F8C4C1A1048E600B158AF /* Debug */,
+				F48F8C4D1A1048E600B158AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F48F8C4E1A1048E600B158AF /* Build configuration list for PBXNativeTarget "Mandelbrot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48F8C4F1A1048E600B158AF /* Debug */,
+				F48F8C501A1048E600B158AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F48F8C511A1048E600B158AF /* Build configuration list for PBXNativeTarget "MandelbrotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F48F8C521A1048E600B158AF /* Debug */,
+				F48F8C531A1048E600B158AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F48F8C231A1048E500B158AF /* Project object */;
+}
