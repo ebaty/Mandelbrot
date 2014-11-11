@@ -11,15 +11,6 @@
 #import <stdlib.h>
 #import <complex.h>
 
-@interface MandelbrotView ()
-
-@property (nonatomic) double cxmin;
-@property (nonatomic) double cxmax;
-@property (nonatomic) double cymin;
-@property (nonatomic) double cymax;
-
-@end
-
 using namespace std;
 @implementation MandelbrotView
 
@@ -39,7 +30,7 @@ using namespace std;
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     int max_iterations = 0xff;
-    double accuracy = 1.5f;
+    double accuracy = 1.0f;
     int w = self.frame.size.width * accuracy;
     int h = self.frame.size.height * accuracy;
     for (int ix = 0; ix < w; ++ix) {
@@ -51,12 +42,17 @@ using namespace std;
             for (iterations = 0; iterations < max_iterations && abs(z) < 2.0; ++iterations)
                 z = z*z + c;
             
-            int r = ((iterations & 0xf0) >> 2) * 0xf;
-            int g = ((iterations & 0xf0) >> 1) * 0xf;
-            int b = ((iterations & 0xff) >> 0) * 0xf;
+            unsigned int r = ((iterations & 0xf0) >> 4) * 0xf;
+            unsigned int g = ((iterations & 0xf0) >> 2) * 0xf;
+            unsigned int b = ((iterations & 0xff) >> 0) * 0xf;
             
+            if ( iterations == max_iterations ) {
+                r = 0.0f;
+                g = 0.0f;
+                b = 0.0f;
+            }
             CGContextSetRGBFillColor(context, r / 255.0f, g / 255.0f, b / 255.0f, 1.0f);
-            CGContextAddRect(context, CGRectMake(ix / accuracy, iy / accuracy, 1.0f / accuracy, 1.0f / accuracy));
+            CGContextAddRect(context, CGRectMake(ix, iy, 1.0f, 1.0f));
             CGContextFillPath(context);
         }
     }
@@ -64,5 +60,6 @@ using namespace std;
     if ( _delegate && [_delegate respondsToSelector:@selector(didEndDrawRect:)]) {
         [_delegate didEndDrawRect:self];
     }
+
 }
 @end

@@ -18,6 +18,8 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="PLH-CK-cH2">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="fsx-9M-QK5"/>
                                 </connections>
@@ -35,10 +37,10 @@
                                 <exclude reference="PLH-CK-cH2"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="yXI-cj-Hue"/>
                                 <exclude reference="bll-Mr-wS4"/>
                                 <exclude reference="kMe-rs-Bve"/>
                                 <exclude reference="tdS-Pu-Ovj"/>
-                                <exclude reference="yXI-cj-Hue"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -46,10 +48,10 @@
                                 <include reference="PLH-CK-cH2"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="yXI-cj-Hue"/>
                                 <include reference="bll-Mr-wS4"/>
                                 <include reference="kMe-rs-Bve"/>
                                 <include reference="tdS-Pu-Ovj"/>
-                                <include reference="yXI-cj-Hue"/>
                             </mask>
                         </variation>
                     </view>

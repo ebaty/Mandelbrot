@@ -19,6 +19,11 @@
 
 @interface MandelbrotView : UIView
 
+@property (nonatomic) double cxmin;
+@property (nonatomic) double cxmax;
+@property (nonatomic) double cymin;
+@property (nonatomic) double cymax;
+
 @property (nonatomic) id<MandelbrotViewDelegate> delegate;
 
 - (id)initWithParam:(double)cxmin cxmax:(double)cxmax cymin:(double)cymin cymax:(double)cymax rect:(CGRect)rect delegate:(id<MandelbrotViewDelegate>)delegate;
