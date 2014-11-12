@@ -6,31 +6,35 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>5F4E8D7F-C18B-4FC9-B7AD-ED29A5C8BF0F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Mandelbrot</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>AF12DE761B5DD37A9CDE23680283D993BB881068</key>
-		<string>https://github.com/nothings/stb.git</string>
+		<key>AD00FA7EC1366CE087885B5818BA8FD35133A5AD</key>
+		<string>https://github.com/ebaty/Mandelbrot.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Mandelbrot.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>AF12DE761B5DD37A9CDE23680283D993BB881068</key>
-		<string>stb/</string>
+		<key>AD00FA7EC1366CE087885B5818BA8FD35133A5AD</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/nothings/stb.git</string>
+	<string>https://github.com/ebaty/Mandelbrot.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>AF12DE761B5DD37A9CDE23680283D993BB881068</string>
+	<string>AD00FA7EC1366CE087885B5818BA8FD35133A5AD</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AF12DE761B5DD37A9CDE23680283D993BB881068</string>
+			<string>AD00FA7EC1366CE087885B5818BA8FD35133A5AD</string>
 			<key>IDESourceControlWCCName</key>
-			<string>stb</string>
+			<string>Mandelbrot</string>
 		</dict>
 	</array>
 </dict>

@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "MandelbrotView.h"
 #import "UIView+Indicator.h"
-#import <SVProgressHUD.h>
 
 @interface ViewController () <UIScrollViewDelegate, MandelbrotViewDelegate>
 
