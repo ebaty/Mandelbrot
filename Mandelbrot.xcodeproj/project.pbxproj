@@ -14,8 +14,8 @@
 		F48F8C3C1A1048E500B158AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48F8C3B1A1048E500B158AF /* Images.xcassets */; };
 		F48F8C3F1A1048E500B158AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F48F8C3D1A1048E500B158AF /* LaunchScreen.xib */; };
 		F48F8C4B1A1048E600B158AF /* MandelbrotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F48F8C4A1A1048E600B158AF /* MandelbrotTests.m */; };
-		F499E7C81A10645700CC1C41 /* UIView+Indicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F499E7C71A10645700CC1C41 /* UIView+Indicator.m */; };
 		F499E7CC1A1066B800CC1C41 /* MandelbrotView.mm in Sources */ = {isa = PBXBuildFile; fileRef = F499E7CB1A1066B800CC1C41 /* MandelbrotView.mm */; };
+		F4AC31E71A14B2D00058CD9A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AC31E61A14B2D00058CD9A /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +45,9 @@
 		F48F8C441A1048E600B158AF /* MandelbrotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MandelbrotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48F8C491A1048E600B158AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F48F8C4A1A1048E600B158AF /* MandelbrotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MandelbrotTests.m; sourceTree = "<group>"; };
-		F499E7C61A10645700CC1C41 /* UIView+Indicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Indicator.h"; sourceTree = "<group>"; };
-		F499E7C71A10645700CC1C41 /* UIView+Indicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Indicator.m"; sourceTree = "<group>"; };
 		F499E7CA1A1066B800CC1C41 /* MandelbrotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MandelbrotView.h; sourceTree = "<group>"; };
 		F499E7CB1A1066B800CC1C41 /* MandelbrotView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MandelbrotView.mm; sourceTree = "<group>"; };
+		F4AC31E61A14B2D00058CD9A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4AC31E71A14B2D00058CD9A /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +72,7 @@
 		0C4C66100F1F6BB28E26134E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4AC31E61A14B2D00058CD9A /* Accelerate.framework */,
 				8101B7A0BBA7FED7F90714C9 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -114,8 +115,6 @@
 				F48F8C351A1048E500B158AF /* ViewController.h */,
 				F48F8C361A1048E500B158AF /* ViewController.m */,
 				F499E7C91A1066A500CC1C41 /* Mandelbrot */,
-				F499E7C61A10645700CC1C41 /* UIView+Indicator.h */,
-				F499E7C71A10645700CC1C41 /* UIView+Indicator.m */,
 				F48F8C381A1048E500B158AF /* Main.storyboard */,
 				F48F8C3B1A1048E500B158AF /* Images.xcassets */,
 				F48F8C3D1A1048E500B158AF /* LaunchScreen.xib */,
@@ -261,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F48F8C371A1048E500B158AF /* ViewController.m in Sources */,
-				F499E7C81A10645700CC1C41 /* UIView+Indicator.m in Sources */,
 				F499E7CC1A1066B800CC1C41 /* MandelbrotView.mm in Sources */,
 				F48F8C341A1048E500B158AF /* AppDelegate.m in Sources */,
 				F48F8C311A1048E500B158AF /* main.m in Sources */,

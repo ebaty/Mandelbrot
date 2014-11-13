@@ -8,6 +8,9 @@
 
 #import "MandelbrotView.h"
 
+#import <Accelerate/Accelerate.h>
+
+#import <vector>
 #import <stdlib.h>
 #import <complex.h>
 
@@ -30,34 +33,74 @@ using namespace std;
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     int max_iterations = 0xff;
-    double accuracy = 1.0f;
-    int w = self.frame.size.width * accuracy;
-    int h = self.frame.size.height * accuracy;
+    int w = self.frame.size.width;
+    int h = self.frame.size.height;
+    
+    vDSP_Length length = w * h;
+    vDSP_Stride str = 1;
+    
+    DSPDoubleSplitComplex c, z;
+    c.realp = (double *)calloc(length, sizeof(double));
+    c.imagp = (double *)calloc(length, sizeof(double));
+    z.realp = (double *)calloc(length, sizeof(double));
+    z.imagp = (double *)calloc(length, sizeof(double));
+   
+    double abs[length];
+    
     for (int ix = 0; ix < w; ++ix) {
         for (int iy = 0; iy < h; ++iy) {
-            complex<double> c(_cxmin + ix/(w-1.0)*(_cxmax-_cxmin), _cymin + iy/(h-1.0)*(_cymax-_cymin));
-            complex<double> z = 0;
-            unsigned int iterations;
+            c.realp[ix * iy] = _cxmin + ix/(w-1.0)*(_cxmax-_cxmin);
+            c.imagp[ix * iy] = _cymin + iy/(h-1.0)*(_cymax-_cymin);
             
-            for (iterations = 0; iterations < max_iterations && abs(z) < 2.0; ++iterations)
-                z = z*z + c;
-            
-            unsigned int r = ((iterations & 0xf0) >> 4) * 0xf;
-            unsigned int g = ((iterations & 0xf0) >> 2) * 0xf;
-            unsigned int b = ((iterations & 0xff) >> 0) * 0xf;
-            
-            if ( iterations == max_iterations ) {
-                r = 0.0f;
-                g = 0.0f;
-                b = 0.0f;
-            }
-            CGContextSetRGBFillColor(context, r / 255.0f, g / 255.0f, b / 255.0f, 1.0f);
-            CGContextAddRect(context, CGRectMake(ix, iy, 1.0f, 1.0f));
-            CGContextFillPath(context);
+            z.realp[ix * iy] = 0;
+            z.imagp[ix * iy] = 0;
         }
     }
     
-    if ( _delegate && [_delegate respondsToSelector:@selector(didEndDrawRect:)]) {
+    double it_result[max_iterations][length];
+   
+    for (int i = 0; i < max_iterations; ++i ) {
+        vDSP_zvmulD(&z, str, &z, str, &z, str, length, 1);
+        
+        vDSP_zvaddD(&z, str, &c, str, &z, str, 1);
+        
+        vDSP_zvabsD(&z, str, abs, str, length);
+        
+        vDSP_vswapD(abs, str, it_result[i], str, length);
+    }
+    
+    for (int ix = 0; ix < w; ++ix ) {
+        for ( int iy = 0; iy < h; ++iy ) {
+            int index = ix * iy;
+            int l = 0, r = max_iterations - 1;
+            
+            int cen = 0;
+            while ( l < r ) {
+                cen = (l + r) / 2;
+                if ( it_result[cen][index] < 2.0f ) {
+                    l = cen;
+                }else {
+                    r = cen;
+                }
+            }
+            
+            unsigned int rr = ((cen & 0xf0) >> 4) * 0xf;
+            unsigned int gg = ((cen & 0xf0) >> 2) * 0xf;
+            unsigned int bb = ((cen & 0xff) >> 0) * 0xf;
+            
+            if ( cen == max_iterations - 1 ) {
+                rr = 0;
+                gg = 0;
+                bb = 0;
+            }
+            
+            CGContextSetRGBFillColor(context, rr / 255.0f, gg / 255.0f, bb / 255.0f, 1.0f);
+            CGContextAddRect(context, CGRectMake(ix, iy, 1.0f, 1.0f));
+            CGContextFillPath(context);
+       }
+    }
+    
+   if ( _delegate && [_delegate respondsToSelector:@selector(didEndDrawRect:)]) {
         [_delegate didEndDrawRect:self];
     }
 

@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "MandelbrotView.h"
-#import "UIView+Indicator.h"
 
 @interface ViewController () <UIScrollViewDelegate, MandelbrotViewDelegate>
 
