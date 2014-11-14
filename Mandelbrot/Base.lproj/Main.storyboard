@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,6 +21,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PLH-CK-cH2" secondAttribute="height" multiplier="1:1" id="f63-0z-oz8"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="f63-0z-oz8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="f63-0z-oz8"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="fsx-9M-QK5"/>
                                 </connections>
@@ -27,20 +41,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="PLH-CK-cH2" secondAttribute="trailing" id="bll-Mr-wS4"/>
-                            <constraint firstItem="PLH-CK-cH2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="kMe-rs-Bve"/>
-                            <constraint firstItem="PLH-CK-cH2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tdS-Pu-Ovj"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PLH-CK-cH2" secondAttribute="bottom" id="yXI-cj-Hue"/>
+                            <constraint firstAttribute="centerY" secondItem="PLH-CK-cH2" secondAttribute="centerY" id="UXt-76-UZf"/>
+                            <constraint firstAttribute="trailing" secondItem="PLH-CK-cH2" secondAttribute="trailing" id="gTs-sb-5FP"/>
+                            <constraint firstItem="PLH-CK-cH2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lae-EI-jrD"/>
+                            <constraint firstAttribute="centerX" secondItem="PLH-CK-cH2" secondAttribute="centerX" id="tcW-Du-WO4"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="PLH-CK-cH2"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="yXI-cj-Hue"/>
-                                <exclude reference="bll-Mr-wS4"/>
-                                <exclude reference="kMe-rs-Bve"/>
-                                <exclude reference="tdS-Pu-Ovj"/>
+                                <exclude reference="UXt-76-UZf"/>
+                                <exclude reference="gTs-sb-5FP"/>
+                                <exclude reference="lae-EI-jrD"/>
+                                <exclude reference="tcW-Du-WO4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -48,10 +62,10 @@
                                 <include reference="PLH-CK-cH2"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="yXI-cj-Hue"/>
-                                <include reference="bll-Mr-wS4"/>
-                                <include reference="kMe-rs-Bve"/>
-                                <include reference="tdS-Pu-Ovj"/>
+                                <include reference="UXt-76-UZf"/>
+                                <include reference="gTs-sb-5FP"/>
+                                <include reference="lae-EI-jrD"/>
+                                <include reference="tcW-Du-WO4"/>
                             </mask>
                         </variation>
                     </view>
